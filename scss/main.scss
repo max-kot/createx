@@ -1,0 +1,32 @@
+@import "plugins";
+
+/*---Базовые стили---*/
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: "Lato", sans-serif;
+	line-height: 1;
+	font-size: 1rem;
+	color: #424551;
+	background: #fff;
+}
+
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.container {
+	max-width: 78.75rem;
+	//max-width: rem(1260); //! размер контейнера + padding
+	margin: 0 auto;
+	padding: 0 15px;
+	@media (max-width: 64em) {
+		//1024px
+		max-width: none;
+	}
+}

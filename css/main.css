@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/*--- Миксин для адаптива ---*/
+/*---Вызов свойства---
+@include adaptive-value("padding", 50, 20, 0);
+(свойство - которое динамически изменияется, начальное макетное значение, минимальное значение свойства, режим)
+режим: 0 - отзывчивость внутри контейнера 1 - отзывчивость по всей ширине 2-отзывчивость за пределами контейнера
+*/
+/*--- Миксин для конвертации единиц ---*/
+/* font-size: rem(42); */
+/*---Базовые стили---*/
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1;
+  font-size: 1rem;
+  color: #424551;
+  background: #fff;
+}
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 78.75rem;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (max-width: 64em) {
+  .container {
+    max-width: none;
+  }
+}

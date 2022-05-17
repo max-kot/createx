@@ -1,0 +1,129 @@
+.first {
+	background: url("../img/header/bg.png") center/cover no-repeat;
+	&__body {
+		height: 100vh;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-row: 0.7fr 0.3fr;
+		padding-top: 4rem;
+		align-items: center;
+		@media (max-height: 590px) {
+			height: 100%;
+		}
+	}
+
+	&__showreel {
+		display: flex;
+		align-items: center;
+		margin-bottom: rem(35);
+		label {
+			color: #1e212c;
+			font-weight: 700;
+			margin-left: rem(15);
+		}
+	}
+
+	&__btn-play {
+		display: block;
+		padding: 18px;
+		background: #ff3f3a;
+		border-radius: 50%;
+		position: relative;
+		&::before {
+			content: "";
+			display: block;
+			background: url("../img/icon/play-btn.svg") center/cover no-repeat;
+			width: 16px;
+			height: 16px;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			display: block;
+			background: #ff3f3a;
+			border-radius: 50%;
+			opacity: 0.12;
+			width: 80px;
+			height: 80px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&__title {
+		color: #1e212c;
+		font-size: rem(64);
+		font-weight: 900;
+		width: 90%;
+		line-height: 1.3;
+		margin-bottom: rem(60);
+	}
+
+	&__btns {
+		display: flex;
+	}
+
+	&__btn {
+		display: block;
+		border: 1px solid #ff3f3a;
+		border-radius: 4px;
+		padding: 1rem 2.5rem;
+		font-weight: 700;
+		color: #ff3f3a;
+		&:first-child {
+			margin-right: rem(24);
+		}
+	}
+
+	&__image {
+		img {
+			width: 100%;
+		}
+	}
+
+	&__stats {
+		grid-column-start: span 2;
+	}
+
+	&__stats-list {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__stats-item {
+		color: #1e212c;
+		display: flex;
+		align-items: center;
+		position: relative;
+		&::before {
+			content: "";
+			display: block;
+			width: 18px;
+			height: 18px;
+			background: #ff3f3a;
+			border-radius: 50%;
+			position: relative;
+			left: -25%;
+			transform: translateX(25%);
+		}
+		&:first-child::before {
+			display: none;
+		}
+	}
+}
+.fitst {
+	&__content {
+	}
+}
+.text-none {
+	display: none;
+	visibility: none;
+}
+.text-bold {
+}
+.number-block {
+	font-weight: 900;
+	font-size: rem(46);
+	margin-right: rem(12);
+}
