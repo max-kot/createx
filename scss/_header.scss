@@ -11,7 +11,7 @@
 	}
 
 	&__logo {
-		width: 130px;
+		min-width: 130px;
 		opacity: 0.7;
 		transition: opacity 0.3s ease-in-out;
 		&:hover {
@@ -32,6 +32,12 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-left: 2.5rem;
+		@media (max-width: 1024px) {
+			margin-left: 1rem;
+		}
+		@media (max-width: rem(768)) {
+			justify-content: flex-end;
+		}
 	}
 
 	&__menu {
@@ -39,6 +45,19 @@
 
 	&__menu-list {
 		display: flex;
+		@media (max-width: rem(768)) {
+			flex-direction: column;
+			align-items: center;
+			overflow: scroll;
+			height: 100vh;
+			background: rgba(255, 255, 255, 0.7);
+			width: 100%;
+			position: absolute;
+			left: 100%;
+			top: rem(90);
+			z-index: 1;
+			transition: left 0.3s ease-in-out;
+		}
 	}
 
 	&__menu-item {
@@ -49,6 +68,13 @@
 			color: #ff3f3a;
 			transition: color 0.3s ease-in-out;
 		}
+		@media (max-width: 1024px) {
+			margin: 0 0.5rem;
+		}
+		@media (max-width: rem(768)) {
+			padding: rem(25);
+			font-size: 1.5rem;
+		}
 	}
 
 	&__menu-link {
@@ -56,6 +82,12 @@
 
 	&__btns {
 		display: flex;
+		@media (max-width: rem(768)) {
+			margin-right: 1rem;
+		}
+		@media (max-width: rem(530)) {
+			display: block;
+		}
 	}
 
 	&__btn-consalt {
@@ -74,6 +106,12 @@
 			color: #ff3f3a;
 			transition: 0.2s ease-in-out;
 		}
+		@media (max-width: 1024px) {
+			padding: 1rem;
+		}
+		@media (max-width: rem(530)) {
+			margin-bottom: rem(15);
+		}
 	}
 
 	&__btn-login {
@@ -90,6 +128,63 @@
 			left: -1.8em;
 			top: 50%;
 			transform: translateY(-50%);
+			@media (max-width: em(1024)) {
+				left: -1.4em;
+			}
+		}
+		@media (max-width: em(1024)) {
+			margin-left: 2rem;
+		}
+	}
+}
+
+.header__burger {
+	display: none;
+	@media (max-width: rem(768)) {
+		display: block;
+	}
+}
+
+.menu-btn {
+	width: rem(50);
+	height: rem(25);
+	position: relative;
+	span {
+		display: block;
+		width: 100%;
+		height: 2px;
+		background: #ff613a;
+		transition: 0.3s;
+		&:first-child {
+			position: absolute;
+			top: 0;
+		}
+		&:last-child {
+			position: absolute;
+			bottom: 0;
+		}
+	}
+}
+
+.active {
+	left: 0;
+}
+
+.active-btn {
+	span {
+		background: #424551;
+		transition: 0.3s;
+		&:first-child {
+			top: 50%;
+			transform: rotate(-45deg);
+		}
+		&:nth-child(2) {
+			display: none;
+			visibility: hidden;
+		}
+		&:last-child {
+			top: 50%;
+			transform: rotate(45deg);
 		}
 	}
 }

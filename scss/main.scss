@@ -30,3 +30,12 @@ body {
 		max-width: none;
 	}
 }
+.text-none {
+	display: none;
+	visibility: none;
+}
+.number-block {
+	font-weight: 900;
+	font-size: rem(46);
+	margin-right: rem(12);
+}

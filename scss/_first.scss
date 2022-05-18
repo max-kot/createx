@@ -5,10 +5,13 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-row: 0.7fr 0.3fr;
-		padding-top: 4rem;
+		padding-top: 6rem;
 		align-items: center;
 		@media (max-height: 590px) {
 			height: 100%;
+		}
+		@media (max-width: rem(530)) {
+			padding-top: rem(130);
 		}
 	}
 
@@ -77,8 +80,16 @@
 	}
 
 	&__image {
+		position: relative;
+		padding: 0px 0px 92% 0px; //*выталкиваем фото для видимости
 		img {
+			//*адаптируем фото
+			position: absolute;
+			top: 0;
+			left: 0;
 			width: 100%;
+			height: 100%;
+			object-fit: contain;
 		}
 	}
 
@@ -115,15 +126,4 @@
 .fitst {
 	&__content {
 	}
-}
-.text-none {
-	display: none;
-	visibility: none;
-}
-.text-bold {
-}
-.number-block {
-	font-weight: 900;
-	font-size: rem(46);
-	margin-right: rem(12);
 }
