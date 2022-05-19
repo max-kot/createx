@@ -4,15 +4,18 @@
 	width: 100%;
 	padding: 1.25rem 0;
 	backdrop-filter: blur(5px);
+	background: rgba(255, 219, 213, 0.6);
 	&__body {
 		display: flex;
 		width: 100%;
 		align-items: center;
+		@media (max-width: rem(530)) {
+		}
 	}
 
 	&__logo {
 		min-width: 130px;
-		opacity: 0.7;
+		opacity: 0.8;
 		transition: opacity 0.3s ease-in-out;
 		&:hover {
 			opacity: 1;
@@ -63,10 +66,8 @@
 	&__menu-item {
 		font-weight: 700;
 		margin: 0 1.25em;
-		transition: color 0.2s ease-in-out;
 		&:hover {
 			color: #ff3f3a;
-			transition: color 0.3s ease-in-out;
 		}
 		@media (max-width: 1024px) {
 			margin: 0 0.5rem;
@@ -119,6 +120,7 @@
 		font-weight: 700;
 		position: relative;
 		color: #424551;
+		opacity: 0.7;
 		&::before {
 			content: "";
 			background: url("../img/icon/profile.svg") center/contain no-repeat;
@@ -131,6 +133,9 @@
 			@media (max-width: em(1024)) {
 				left: -1.4em;
 			}
+		}
+		&:hover {
+			opacity: 1;
 		}
 		@media (max-width: em(1024)) {
 			margin-left: 2rem;

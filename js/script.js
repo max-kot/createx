@@ -1,9 +1,15 @@
 const menuButton = document.querySelector('#menu-btn');
 const menuList = document.querySelector('#menu-list')
 const menuElements = document.querySelectorAll('.header__menu-list li')
-menuButton.addEventListener('click', function () {
-	if (menuList.classList.toggle('active')) {
-		menuButton.classList.toggle('active-btn');
+
+function getActiveMenu() {
+	menuList.classList.toggle('active');
+	menuButton.classList.toggle('active-btn');
+	closeMenuByElement(getActiveMenu)
+}
+
+function closeMenuByElement(func) {
+	if (func) {
 		menuElements.forEach(function (item) {
 			item.addEventListener('click', function () {
 				menuList.classList.remove('active')
@@ -11,4 +17,6 @@ menuButton.addEventListener('click', function () {
 			})
 		})
 	}
-})
+}
+menuButton.addEventListener('click', getActiveMenu);
+
