@@ -1,6 +1,6 @@
 .about {
 	@include adaptive-value("padding-top", 207, 35, 0);
-	@include adaptive-value("padding-top", 180, 35, 0);
+	@include adaptive-value("padding-bottom", 180, 35, 0);
 	&__body {
 		width: 100%;
 		display: flex;
