@@ -93,20 +93,7 @@
 
 	&__btn-consalt {
 		display: block;
-		background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
-		border-radius: 4px;
-		padding: 1em 2.5em;
-		font-weight: 700;
-		color: #fff;
-		letter-spacing: 0.031em;
-		border: 1px solid transparent;
-		transition: background-color 0.3s ease-in-out;
-		&:hover {
-			background: transparent;
-			border: 1px solid #ff3f3a;
-			color: #ff3f3a;
-			transition: 0.2s ease-in-out;
-		}
+
 		@media (max-width: 1024px) {
 			padding: 1rem;
 		}

@@ -7,6 +7,7 @@
 		grid-template-columns: 1fr 1fr;
 		grid-row: 0.7fr 0.3fr;
 		padding-top: 6rem;
+		padding-bottom: rem(80);
 		align-items: center;
 		position: relative;
 		@media (max-height: 590px) {
@@ -94,19 +95,8 @@
 
 	&__btn {
 		display: block;
-		border: 1px solid #ff3f3a;
-		border-radius: 4px;
-		padding: 1rem 2.5rem;
-		font-weight: 700;
-		color: #ff3f3a;
-		transition: 0.3s;
 		&:first-child {
 			margin-right: rem(24);
-		}
-		&:hover {
-			color: #fff;
-			background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
-			transition: 0.3s;
 		}
 	}
 

@@ -1,8 +1,8 @@
 @use "sass:math";
 //! 1
 /*--- Миксин для адаптива ---*/
-$maxWidth: 1618; //ширина полотна
-$maxWidthContainer: 1187; //ширина контейнера
+$maxWidth: 1080; //ширина полотна
+$maxWidthContainer: 1260; //ширина контейнера
 
 @mixin adaptive-value($property, $startSize, $minSize, $type) {
 	$addSize: $startSize - $minSize;

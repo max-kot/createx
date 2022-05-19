@@ -49,3 +49,49 @@ body {
   font-size: 2.875rem;
   margin-right: 0.75rem;
 }
+
+.btn {
+  border: 1px solid #ff3f3a;
+  border-radius: 4px;
+  padding: 1rem 2.5rem;
+  font-weight: 700;
+  color: #ff3f3a;
+  transition: 0.3s;
+}
+.btn:hover {
+  color: #fff;
+  background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
+  transition: 0.3s;
+}
+
+.btn-orange {
+  background: linear-gradient(55.95deg, #ff3f3a 0%, #f75e05 100%);
+  border-radius: 4px;
+  padding: 1em 2.5em;
+  border: 1px solid transparent;
+  transition: background-color 0.3s ease-in-out;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.031em;
+}
+.btn-orange:hover {
+  background: transparent;
+  border: 1px solid #ff3f3a;
+  color: #ff3f3a;
+  transition: 0.2s ease-in-out;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 2.875rem;
+  line-height: 130%;
+  color: #1e212c;
+}
+
+.subtitle {
+  font-weight: 700;
+  color: #1e212c;
+  letter-spacing: 0.0625rem;
+  text-transform: uppercase;
+  line-height: 150%;
+}
