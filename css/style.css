@@ -1072,6 +1072,9 @@ body {
   z-index: 5;
 }
 
+.featured-item__photo {
+  flex: 0 0 13.375rem;
+}
 .featured-item__photo img {
   width: 100%;
   height: 100%;
