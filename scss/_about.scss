@@ -1,11 +1,13 @@
 .about {
-	@include adaptive-value("padding-top", 207, 35, 0);
-	@include adaptive-value("padding-bottom", 180, 35, 0);
+	padding-top: 16.9%;
+	padding-bottom: 14.7%;
+	background: url("../img/bg-about.png") center/contain no-repeat;
 	&__body {
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
 		@media (max-width: rem(768)) {
 			flex-direction: column;
 		}

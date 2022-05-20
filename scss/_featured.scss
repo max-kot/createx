@@ -1,0 +1,146 @@
+.featured {
+	padding-bottom: 14.7%;
+	&__body {
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding-bottom: 5.6%;
+		@media (max-width: rem(768)) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
+	&__heading {
+		@media (max-width: rem(768)) {
+			margin-bottom: 2%;
+		}
+	}
+
+	&__subtitle {
+	}
+
+	&__title {
+	}
+
+	&__btn {
+		max-height: rem(55);
+	}
+
+	&__courses {
+	}
+
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		gap: rem(30);
+	}
+
+	&__item {
+		flex: 1 1 calc((100% / 2) - 4rem);
+		@media (max-width: rem(768)) {
+			flex: 1 1 calc(100% - rem(30));
+		}
+		display: flex;
+		border: 1px solid #e5e8ed;
+		box-shadow: 0px 80px 80px -20px rgba(154, 156, 165, 0.08), 0px 30px 24px -10px rgba(154, 156, 165, 0.05),
+			0px 12px 10px -6px rgba(154, 156, 165, 0.04), 0px 4px 4px -4px rgba(30, 33, 44, 0.03);
+		border-radius: 4px;
+		transition: transform 0.3s;
+		&:hover {
+			transition: transform 0.3s;
+			transform: scale(1.1);
+			box-shadow: 0px 0px 18px 10px rgba(154, 156, 165, 0.3);
+			z-index: 5;
+		}
+	}
+}
+.featured-item {
+	&__photo {
+		flex: 1 0 rem(214);
+		@media (max-width: em(768)) {
+			flex: 0 0 rem(214);
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			//object-position: top;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0 rem(32);
+	}
+
+	&__category {
+		span {
+			display: inline-block;
+			font-size: rem(14);
+			line-height: 150%;
+			padding: rem(1) rem(8);
+			color: #fff;
+			background: #03cea4;
+			border-radius: 4px;
+			margin-bottom: rem(20);
+			opacity: 0.7;
+			transition: opacity 0.3s;
+			&:hover {
+				transition: opacity 0.3s;
+				opacity: 1;
+			}
+		}
+	}
+
+	&__title-link {
+		display: block;
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: rem(20);
+		line-height: 150%;
+		color: #1e212c;
+		margin-bottom: rem(20);
+		transition: color 0.2s;
+		&:hover {
+			color: #ff4242;
+			transition: color 0.2s;
+		}
+	}
+
+	&__descr {
+		line-height: 150%;
+	}
+	&__price {
+		color: #ff4242;
+		font-weight: 700;
+		font-size: rem(18);
+	}
+}
+.category-marketing {
+	span {
+		background: #03cea4;
+	}
+}
+.category-management {
+	span {
+		background: #5a87fc;
+	}
+}
+.category-hr {
+	span {
+		background: #f89828;
+	}
+}
+.category-design {
+	span {
+		background: #f52f6e;
+	}
+}
