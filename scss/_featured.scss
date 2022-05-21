@@ -67,6 +67,9 @@
 			//object-position: top;
 			object-fit: cover;
 		}
+		@media (max-width: em(425)) {
+			flex: 0 0 rem(100);
+		}
 	}
 
 	&__content {
@@ -74,6 +77,10 @@
 		flex-direction: column;
 		justify-content: center;
 		margin: 0 rem(32);
+		@media (max-width: em(425)) {
+			margin: 0;
+			padding: rem(15);
+		}
 	}
 
 	&__category {

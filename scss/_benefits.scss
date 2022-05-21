@@ -1,0 +1,53 @@
+.benefits {
+	padding-bottom: 18%;
+	&__body {
+	}
+
+	&__subtitle {
+		text-align: center;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: rem(60);
+	}
+
+	&__tabs {
+	}
+
+	&__tab-link-list {
+		display: flex;
+		margin-bottom: rem(60);
+	}
+
+	&__tab-link {
+		flex: 0 1 25%;
+		text-align: center;
+		padding: rem(10) 0;
+		cursor: pointer;
+		border: 1px solid transparent;
+		line-height: 160%;
+		font-weight: 700;
+		&:hover {
+			border: 1px solid #ff3f3a;
+			border-radius: 4px;
+		}
+		&.active {
+			border: 1px solid #ff3f3a;
+			border-radius: 4px;
+			color: #ff3f3a;
+		}
+	}
+
+	&__tab-list {
+	}
+	&__tab-item {
+		background: rgb(74, 74, 189);
+		height: 200px;
+		color: azure;
+		font-size: 40px;
+	}
+}
+.hidden {
+	display: none;
+}

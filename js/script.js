@@ -20,3 +20,24 @@ function closeMenuByElement(func) {
 }
 menuButton.addEventListener('click', getActiveMenu);
 
+/*--- Табы ---*/
+const tabLinks = document.querySelectorAll('[data-tab]');
+const tabs = document.querySelectorAll('.benefits__tab-item');
+
+tabLinks.forEach(function (item) {
+	const link = item;
+	item.addEventListener('click', function () {
+
+		tabs.forEach(function (item) {
+			item.classList.add('hidden')
+
+		})
+		const tabId = this.dataset.tab;
+		const tab = document.querySelector('#' + tabId);
+		if (tab.classList.remove('hidden')) {
+			link.classList.add('active')
+		}
+	})
+})
+
+
