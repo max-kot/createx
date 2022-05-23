@@ -22,22 +22,29 @@ menuButton.addEventListener('click', getActiveMenu);
 
 /*--- Табы ---*/
 const tabLinks = document.querySelectorAll('[data-tab]');
-const tabs = document.querySelectorAll('.benefits__tab-item');
+const tabBoxes = document.querySelectorAll('.benefits__tab-item');
 
-tabLinks.forEach(function (item) {
-	const link = item;
+const index = 0;
+
+const activeLink = (num) => {
+	for (let link of tabLinks) {
+		link.classList.remove('active');
+	}
+	tabLinks[num].classList.add('active');
+}
+const activeTab = (num) => {
+	for (let tab of tabBoxes) {
+		tab.classList.remove('active');
+	}
+	tabBoxes[num].classList.add('active');
+}
+
+tabLinks.forEach(function (item, index) {
 	item.addEventListener('click', function () {
-
-		tabs.forEach(function (item) {
-			item.classList.add('hidden')
-
-		})
-		const tabId = this.dataset.tab;
-		const tab = document.querySelector('#' + tabId);
-		if (tab.classList.remove('hidden')) {
-			link.classList.add('active')
-		}
+		activeLink(index);
+		activeTab(index);
 	})
 })
+
 
 
