@@ -1162,11 +1162,17 @@ body {
 }
 .benefits__title {
   text-align: center;
-  margin-bottom: 3.75rem;
+  margin-bottom: calc(15px + 45 * ((100vw - 320px) /760));
 }
 .benefits__tab-link-list {
   display: flex;
   margin-bottom: 3.75rem;
+}
+@media (max-width: 48em) {
+  .benefits__tab-link-list {
+    flex-direction: column;
+    margin-bottom: 0.9375rem;
+  }
 }
 .benefits__tab-link {
   flex: 0 1 25%;
@@ -1176,6 +1182,9 @@ body {
   border: 1px solid transparent;
   line-height: 160%;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .benefits__tab-link:hover {
   border: 1px solid #ff3f3a;
@@ -1185,6 +1194,9 @@ body {
   border: 1px solid #ff3f3a;
   border-radius: 4px;
   color: #ff3f3a;
+}
+.benefits__tab-link.active svg {
+  fill: #ff3f3a;
 }
 .benefits__tab-item {
   display: none;
@@ -1199,8 +1211,18 @@ body {
   display: none;
 }
 
+@media (max-width: 48em) {
+  .tab-item {
+    flex: 0 1 50%;
+  }
+}
 .tab-item__text {
   flex: 0 1 40.5%;
+}
+@media (max-width: 48em) {
+  .tab-item__text {
+    flex: 1 1 100%;
+  }
 }
 .tab-item__title {
   font-weight: 900;
@@ -1216,6 +1238,15 @@ body {
   flex: 0 1 50%;
   max-height: 400px;
 }
-.tab-item__image img {
-  width: 100%;
+@media (max-width: 48em) {
+  .tab-item__image {
+    display: none;
+  }
+}
+
+.svg {
+  fill: #1e212c;
+  width: 15px;
+  height: 15px;
+  margin-right: 20px;
 }
