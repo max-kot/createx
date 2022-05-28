@@ -21,49 +21,54 @@ function closeMenuByElement(func) {
 menuButton.addEventListener('click', getActiveMenu);
 
 /*--- Табы ---*/
-//const tabLinks = document.querySelectorAll('[data-tab]');
-//const tabBoxes = document.querySelectorAll('.benefits__tab-item');
-
-//const index = 0;
-
-//const activeLink = (num) => {
-//	for (let link of tabLinks) {
-//		link.classList.remove('active');
-//	}
-//	tabLinks[num].classList.add('active');
-//}
-//const activeTab = (num) => {
-//	for (let tab of tabBoxes) {
-//		tab.classList.remove('active');
-//	}
-//	tabBoxes[num].classList.add('active');
-//}
-
-//tabLinks.forEach(function (item, index) {
-//	item.addEventListener('click', function () {
-//		activeLink(index);
-//		activeTab(index);
-//	})
-//})
-
 const tabLinks = document.querySelectorAll('[data-tab]');
 const tabBoxes = document.querySelectorAll('.benefits__tab-item');
 
-tabLinks.forEach(function (link) {
-	let linkId = link.dataset.tab; // получаем ссылки на табы
+const index = 0;
 
-	link.addEventListener('click', function () {
+const activeLink = (num) => {
+	for (let link of tabLinks) {
+		link.classList.remove('active');
+	}
+	tabLinks[num].classList.add('active');
+}
+const activeTab = (num) => {
+	for (let tab of tabBoxes) {
+		tab.classList.remove('active');
+	}
+	tabBoxes[num].classList.add('active');
+}
 
-		tabLinks.forEach(function (link) {
-			link.classList.remove('active');
-		})
-
-		tabBoxes.forEach(function (tabBox) {
-			tabBox.classList.remove('active');
-			let tabId = document.querySelector('#' + linkId);
-			tabId.classList.add('active');
-
-		})
-		link.classList.add('active');
+tabLinks.forEach(function (item, index) {
+	item.addEventListener('click', function () {
+		activeLink(index);
+		activeTab(index);
 	})
+})
+
+// Swiper
+const sliderTeam = new Swiper('.team__slider', {
+	slidesPerView: 4,
+	spaceBetween: 30,
+	loop: true,
+	// Navigation arrows
+	navigation: {
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+
+	breakpoints: {
+		320: {
+			slidesPerView: 1,
+		},
+		425: {
+			slidesPerView: 2,
+		},
+		769: {
+			slidesPerView: 3,
+		},
+		1025: {
+			slidesPerView: 4,
+		},
+	},
 })
