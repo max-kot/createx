@@ -36,6 +36,11 @@
 	width: 48px;
 	height: 48px;
 	border-radius: 50%;
+	@media (max-width: em(424)) {
+		top: 100px;
+		right: auto;
+		left: 0;
+	}
 	&:hover {
 		background: #ff3f3a;
 		&::after {
@@ -59,6 +64,9 @@
 	width: 48px;
 	height: 48px;
 	border-radius: 50%;
+	@media (max-width: em(424)) {
+		top: 100px;
+	}
 	&:hover {
 		background: #ff3f3a;
 		&::after {
@@ -74,7 +82,7 @@
 }
 .team-slide {
 	&__card {
-		max-height: 340px;
+		min-height: 340px;
 		background: #ffcf2d;
 		padding: 20px 20px 0px 20px;
 		position: relative;
@@ -107,17 +115,46 @@
 				visibility: visible;
 			}
 		}
-		@media (max-width: 1023px) {
-			min-height: 100%;
+		@media (max-width: em(1023)) {
+			//min-height: 100%;
+		}
+		@media (max-width: em(768)) {
+			&:after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(
+					180deg,
+					rgba(30, 33, 44, 0) 43.9%,
+					rgba(30, 33, 44, 0.03) 55.21%,
+					rgba(30, 33, 44, 0.33) 68.73%,
+					rgba(30, 33, 44, 0.56) 76.17%,
+					rgba(30, 33, 44, 0.768225) 83.75%,
+					rgba(30, 33, 44, 0.92) 91.49%,
+					#1e212c 100%
+				);
+				border-radius: 4px;
+			}
 		}
 	}
 
 	&__photo {
 		position: relative;
 		padding-bottom: 155.5%;
-		@media (max-width: 1024px) {
-			padding-bottom: 100%;
+		@media (max-width: em(835)) {
+			padding-bottom: 180%;
 		}
+		@media (max-width: em(505)) {
+			padding-bottom: 220%;
+		}
+		@media (max-width: em(424)) {
+			padding-bottom: 150%;
+		}
+
 		img {
 			position: absolute;
 			width: 100%;
@@ -136,6 +173,10 @@
 		position: absolute;
 		bottom: 20px;
 		right: 14px;
+		@media (max-width: em(768)) {
+			visibility: visible;
+			display: flex;
+		}
 	}
 
 	&__link {
