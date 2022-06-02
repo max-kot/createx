@@ -29,7 +29,7 @@
 	&__slide-btn-next {
 	}
 }
-.swiper-button-prev {
+.team__slide-btn-prev.swiper-button-prev {
 	top: 60px;
 	right: 50px;
 	left: auto;
@@ -48,7 +48,8 @@
 		}
 	}
 }
-.swiper-button-prev::after {
+
+.team__slide-btn-prev.swiper-button-prev::after {
 	content: "";
 	background: url("../img/icon/arrow-left-gray.svg") center/cover no-repeat;
 	width: 18px;
@@ -57,7 +58,7 @@
 		background: url("../img/icon/arrow-left.svg") center/cover no-repeat;
 	}
 }
-.swiper-button-next {
+.team__slide-btn-next.swiper-button-next {
 	top: 60px;
 	right: 0;
 	left: auto;
@@ -74,7 +75,7 @@
 		}
 	}
 }
-.swiper-button-next::after {
+.team__slide-btn-next.swiper-button-next::after {
 	content: "";
 	background: url("../img/icon/arrow-right-gray.svg") center/cover no-repeat;
 	width: 18px;

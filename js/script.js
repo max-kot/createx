@@ -53,8 +53,8 @@ const sliderTeam = new Swiper('.team__slider', {
 	loop: true,
 	// Navigation arrows
 	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
+		nextEl: '.team__slide-btn-next',
+		prevEl: '.team__slide-btn-prev',
 	},
 
 	breakpoints: {
@@ -71,4 +71,22 @@ const sliderTeam = new Swiper('.team__slider', {
 			slidesPerView: 4,
 		},
 	},
+})
+
+const sliderTestimonials = new Swiper('.testimonials__slider', {
+	slidesPerView: 1,
+	spaceBetween: 30,
+	loop: true,
+	// Navigation arrows
+	navigation: {
+		nextEl: '.testimonials__slider-btn-next',
+		prevEl: '.testimonials__slider-btn-prev',
+	},
+	pagination: {
+		el: '.swiper-pagination',
+		// буллеты
+		clickable: true, // можно жать на точки
+		// динамические буллеты
+	},
+
 })
