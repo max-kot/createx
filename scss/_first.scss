@@ -141,7 +141,7 @@
 	&__stats-list {
 		display: flex;
 		justify-content: space-between;
-		@media (max-width: em(768)) {
+		@media (max-width: em(952)) {
 			flex-direction: column;
 			justify-content: center;
 		}
@@ -162,14 +162,14 @@
 			position: relative;
 			left: -25%;
 			transform: translateX(25%);
-			@media (max-width: em(768)) {
+			@media (max-width: em(952)) {
 				left: 0;
 				margin-right: 15px;
 			}
 		}
 		&:first-child::before {
 			display: none;
-			@media (max-width: em(768)) {
+			@media (max-width: em(952)) {
 				display: block;
 			}
 		}

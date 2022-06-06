@@ -1,6 +1,9 @@
 .testimonials {
 	background: url("../img/team/bg.png") center/cover no-repeat;
-	padding-bottom: 160px;
+	padding-bottom: rem(160);
+	@media (max-width: em(768)) {
+		padding-bottom: rem(80);
+	}
 	&__body {
 		position: relative;
 	}
@@ -17,6 +20,9 @@
 	&__slider {
 		position: static;
 		margin: 0 69px;
+		@media (max-width: em(768)) {
+			margin: 0;
+		}
 	}
 
 	&__slider-wrapper {
@@ -25,15 +31,24 @@
 	&__slide {
 		background: #fff;
 		padding: rem(64) rem(150);
+		border-radius: 4px;
+		@media (max-width: em(1024)) {
+			padding: rem(30) rem(70);
+		}
+		@media (max-width: em(768)) {
+			padding: rem(30);
+		}
 	}
 
 	&__slider-btn-prev.swiper-button-prev {
 		left: 0;
-		top: 60%;
+		top: 65%;
 		width: 48px;
 		height: 48px;
 		border-radius: 50%;
-
+		@media (max-width: em(768)) {
+			top: 25%;
+		}
 		&.swiper-button-prev::after {
 			content: "";
 			background: url("../img/icon/arrow-left-gray.svg") center/cover no-repeat;
@@ -57,7 +72,9 @@
 		width: 48px;
 		height: 48px;
 		border-radius: 50%;
-
+		@media (max-width: em(768)) {
+			top: 25%;
+		}
 		&.swiper-button-next::after {
 			content: "";
 			background: url("../img/icon/arrow-right-gray.svg") center/cover no-repeat;
@@ -74,6 +91,9 @@
 	&__slider-pagination {
 		&.swiper-pagination-horizontal {
 			bottom: -60px;
+			@media (max-width: em(768)) {
+				bottom: -30px;
+			}
 		}
 
 		& .swiper-pagination-bullet {
@@ -101,6 +121,13 @@
 			position: absolute;
 			top: 0;
 			left: -60px;
+			@media (max-width: em(1024)) {
+				left: -40px;
+			}
+			@media (max-width: em(768)) {
+				top: -20px;
+				left: -20px;
+			}
 		}
 	}
 
