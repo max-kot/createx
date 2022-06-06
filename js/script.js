@@ -56,7 +56,25 @@ const sliderTeam = new Swiper('.team__slider', {
 		nextEl: '.team__slide-btn-next',
 		prevEl: '.team__slide-btn-prev',
 	},
-
+	//Включение/отключение перетаскивания на ПК
+	simulateTouch: true,
+	// Чувствительность свайпа
+	touchRatio: 1,
+	//Угол срабатывания свайпа 0 = отключит, чем больше тем легче
+	touchAngle: 45,
+	// Курсор перетаскивания
+	grabCursor: true,
+	// Скорость переключения
+	speed: 800,
+	// Автопрокрутка
+	autoplay: {
+		// пауза между прокруткой
+		delay: 3000,
+		// закончить на последнем слайде
+		stopOnLastSlide: true,
+		// отключить после ручного переключения
+		disableOnInteraction: false,
+	},
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
@@ -77,6 +95,16 @@ const sliderTestimonials = new Swiper('.testimonials__slider', {
 	slidesPerView: 1,
 	spaceBetween: 30,
 	loop: true,
+	//Включение/отключение перетаскивания на ПК
+	simulateTouch: true,
+	// Чувствительность свайпа
+	touchRatio: 1,
+	//Угол срабатывания свайпа 0 = отключит, чем больше тем легче
+	touchAngle: 45,
+	// Курсор перетаскивания
+	grabCursor: true,
+	// Скорость переключения
+	speed: 800,
 	// Navigation arrows
 	navigation: {
 		nextEl: '.testimonials__slider-btn-next',
@@ -88,5 +116,13 @@ const sliderTestimonials = new Swiper('.testimonials__slider', {
 		clickable: true, // можно жать на точки
 		// динамические буллеты
 	},
-
+	// Автопрокрутка
+	autoplay: {
+		// пауза между прокруткой
+		delay: 3000,
+		// закончить на последнем слайде
+		stopOnLastSlide: true,
+		// отключить после ручного переключения
+		disableOnInteraction: false,
+	},
 })
