@@ -126,3 +126,27 @@ const sliderTestimonials = new Swiper('.testimonials__slider', {
 		disableOnInteraction: false,
 	},
 })
+
+/*--- Спойлеры для футера ---*/
+const spoilerTitle = document.querySelectorAll('[data-title]');
+const spoilerContent = document.querySelectorAll('[data-content]');
+
+
+
+spoilerTitle.forEach(function (item) {
+	item.addEventListener('click', function () {
+		this.classList.toggle('active-spoiler');
+		this.nextElementSibling.classList.toggle('display-block');
+	})
+});
+
+/*--- Кнопка вверх ---*/
+const goTopBtn = document.querySelector('#up-btn');
+
+function backToTop() {
+	if (window.pageYOffset > 0) {
+		window.scrollBy(0, -80);
+		setTimeout(backToTop, 0);
+	}
+}
+goTopBtn.addEventListener('click', backToTop);
